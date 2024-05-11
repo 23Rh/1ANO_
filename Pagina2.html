@@ -5,70 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fotos do Aniversário</title>
     <style>
-        body {
-            background-color: #ffcccc;
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-
-        h1 {
-            margin-top: 50px;
-        }
-
-        .carousel {
-            width: 50%;
-            margin: 20px auto;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .carousel-inner {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
-        .carousel-item {
-            width: 100%; /* Largura da imagem */
-            height: 500px; /* Altura da imagem */
-            flex: 0 0 auto;
-        }
-
-        .carousel img {
-            width: 80%;
-            height: 100%;
-            object-fit: cover; /* Mantém a proporção da imagem */
-        }
-
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.5);
-            color: #333;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-            font-size: 24px;
-        }
-
-        .carousel-btn.prev {
-            left: 10px;
-        }
-
-        .carousel-btn.next {
-            right: 10px;
-        }
-        @media (max-width: 768px) {
-            .carousel {
-                width: 90%; /* Largura do carrossel para telas menores */
-            }
-
-            .carousel-item {
-                width: 90%; /* Largura da imagem para telas menores */
-                height: auto; /* Altura da imagem ajustada automaticamente */
-                margin: 0 auto; /* Centralizar imagens */
-            }
-        }
+        body{background-color:#fcc;text-align:center;font-family:Arial,sans-serif}h1{margin-top:50px}.carousel{width:50%;margin:20px auto;overflow:hidden;position:relative}.carousel-inner{display:flex;transition:transform .5s ease}.carousel-item{width:100%;height:500px;flex:0 0 auto}.carousel img{width:80%;height:100%;object-fit:cover}.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.5);color:#333;border:none;cursor:pointer;padding:10px;font-size:24px}.carousel-btn.prev{left:10px}.carousel-btn.next{right:10px}@media (max-width: 768px){.carousel{width:90%}.carousel-item{width:90%;height:auto;margin:0 auto}}
     </style>
 </head>
 <body>
@@ -226,30 +163,7 @@
         <button class="carousel-btn next" onclick="nextSlide()">›</button>
     </div>
     <script>
-        let slideIndex = 0;
-        showSlides(slideIndex);
-
-        function showSlides(n) {
-            const slides = document.querySelectorAll('.carousel-item');
-            if (n >= slides.length) {
-                slideIndex = 0;
-            }
-            if (n < 0) {
-                slideIndex = slides.length - 1;
-            }
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = 'none';
-            }
-            slides[slideIndex].style.display = 'block';
-        }
-
-        function nextSlide() {
-            showSlides(slideIndex += 1);
-        }
-
-        function prevSlide() {
-            showSlides(slideIndex -= 1);
-        }
+        let slideIndex=0;showSlides(slideIndex);function showSlides(a){const b=document.querySelectorAll(".carousel-item");a>=b.length&&(slideIndex=0),0>a&&(slideIndex=b.length-1);for(let c=0;c<b.length;c++)b[c].style.display="none";b[slideIndex].style.display="block"}function nextSlide(){showSlides(slideIndex+=1)}function prevSlide(){showSlides(slideIndex-=1)}
     </script>
 </body>
 </html>
